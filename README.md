@@ -10,7 +10,7 @@ Eddie.surf uses Claude Sonnet 4 to intelligently extract data from websites, han
 - **Smart Crawling**: AI understands page content and structure, not just HTML
 - **Structured Output**: Get clean JSON data matching your exact schema
 - **Workflow-Ready**: Built-in webhooks and polling for seamless n8n integration
-- **Cost Effective**: At $0.10-0.15 per page, often cheaper than building your own solution
+- **Cost Effective**: At $0.04-0.06 per page, often cheaper than building your own solution
 
 ## Installation
 
@@ -96,7 +96,7 @@ Perfect for large-scale data extraction that shouldn't block your workflow execu
 | Handle pagination manually | AI automatically follows links |
 | Break on site updates | Adapts to layout changes |
 | Complex proxy management | Built-in IP handling |
-| $1,749/month for ScrapingBee | $0.10-0.15 per page |
+| $1,749/month for ScrapingBee | $0.04-0.06 per page |
 
 ## Resources
 
