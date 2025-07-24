@@ -1,15 +1,16 @@
 # n8n-nodes-eddie-surf
 
-n8n community nodes for Eddie.surf web crawling and intelligent search.
+Transform websites into structured JSON data with AI-powered crawling - no brittle selectors, no complex setup.
 
-## What is Eddie.surf?
+## Why Eddie.surf?
 
-Eddie.surf is an AI-powered web crawling and search platform that extracts structured data from websites. It provides:
+Eddie.surf uses Claude Sonnet 4 to intelligently extract data from websites, handling dynamic content, pagination, and complex layouts that break traditional scrapers. Perfect for n8n workflows that need reliable web data.
 
-- **Web Crawling**: Extract structured data from 1-199 URLs (or 200+ with batch processing)
-- **Smart Search**: AI-powered search across the web with customizable results
-- **Async Processing**: Webhook callbacks for long-running crawl jobs
-- **Flexible Data Extraction**: Define custom JSON schemas for data extraction
+**What makes it different:**
+- **Smart Crawling**: AI understands page content and structure, not just HTML
+- **Structured Output**: Get clean JSON data matching your exact schema
+- **Workflow-Ready**: Built-in webhooks and polling for seamless n8n integration
+- **Cost Effective**: At $0.10-0.15 per page, often cheaper than building your own solution
 
 ## Installation
 
@@ -17,32 +18,32 @@ Eddie.surf is an AI-powered web crawling and search platform that extracts struc
 npm install n8n-nodes-eddie-surf
 ```
 
-## Configuration
+## Quick Start
 
-1. Get your Eddie.surf API key from [your dashboard](https://eddie.surf/dashboard)
-2. In n8n, create new Eddie.surf API credentials
-3. Enter your API key in the credentials configuration
+1. **Get API Key**: Sign up at [eddie.surf](https://eddie.surf) and grab your API key
+2. **Add Credentials**: In n8n, create new "Eddie Surf API" credentials  
+3. **Start Crawling**: Drop the Eddie.surf node into your workflow
 
-## Available Nodes
+## What You Can Build
 
-### Eddie.surf Node
+**Lead Research Workflows**
+- Crawl prospect websites → Extract contact info → Add to CRM
+- Monitor competitor pricing → Alert on changes → Update strategy
 
-A regular node for initiating Eddie.surf operations:
+**Market Intelligence**
+- Batch crawl industry sites → Analyze trends → Generate reports
+- Track product mentions → Sentiment analysis → Dashboard updates  
 
-#### Operations
+**AI Agent Data Sources**
+- Web research → Structured data → Feed to language models
+- Real-time search → Context gathering → Enhanced AI responses
 
-- **Crawl**: Crawl 1-199 URLs and extract structured data
-- **Crawl Batch**: Batch crawl 200+ URLs with optimized processing  
-- **Smart Search**: AI-powered search across the web
-- **Get Status**: Check the status of crawl or search jobs
+## Available Operations
 
-#### Key Features
-
-- **Flexible Data Extraction**: Define custom JSON schemas
-- **Advanced Options**: Control crawl depth, timeout, callback modes
-- **Webhook Integration**: Set callback URLs for async processing
-- **Smart Search**: Web-wide search with customizable filters
-- **Comprehensive Validation**: Built-in parameter validation and error handling
+- **Crawl**: Extract data from 1-199 URLs with custom JSON schemas
+- **Batch Crawl**: Process 200+ URLs efficiently with reduced costs
+- **Smart Search**: AI-powered web search with structured results  
+- **Get Status**: Monitor job progress and retrieve results
 
 ## Example Workflows
 
@@ -77,30 +78,37 @@ A regular node for initiating Eddie.surf operations:
 }
 ```
 
-### Async Crawling with Webhooks
+### Async Workflow Integration
 
-1. **Start Crawl**: Use Eddie.surf node with `callback_url` parameter
-2. **Process Results**: Set up webhook endpoint or trigger node to receive results
-3. **Continue Workflow**: Process extracted data when crawl completes
+Eddie.surf is built for long-running workflows. Start a crawl job with a webhook callback, then continue your n8n workflow when data is ready:
 
-## API Reference
+1. **Start Crawl** → Set `callback_url` to your n8n webhook
+2. **Process in Background** → Eddie.surf crawls and extracts data  
+3. **Webhook Triggers** → Receive structured results, continue workflow
 
-All operations support the full Eddie.surf API specification:
+Perfect for large-scale data extraction that shouldn't block your workflow execution.
 
-- **Crawl Parameters**: urls, context, json, max_depth, max_pages, timeout_per_page, callback_url, callback_mode, rules, include_technical, mock
-- **Smart Search Parameters**: query, context, max_results, website_only, skip_duplicate_domains, rules, additional_guidelines, callback_url, mock  
-- **Status Parameters**: job_id, job_type (crawl/smart-search), site_id (optional)
+## Why This Beats DIY Scraping
 
-## Support
+| Traditional Scraping | Eddie.surf |
+|---------------------|------------|
+| Write brittle CSS selectors | Describe what you want in plain English |
+| Handle pagination manually | AI automatically follows links |
+| Break on site updates | Adapts to layout changes |
+| Complex proxy management | Built-in IP handling |
+| $1,749/month for ScrapingBee | $0.10-0.15 per page |
 
-- **Documentation**: [Eddie.surf Docs](https://docs.eddie.surf)
-- **Issues**: [GitHub Issues](https://github.com/surescaleai/n8n-nodes-eddie-surf/issues)
-- **API Support**: [Eddie.surf Support](https://eddie.surf/support)
+## Resources
+
+- **Documentation**: [docs.eddie.surf](https://docs.eddie.surf) - Complete API reference
+- **Try It**: [eddie.surf/playground](https://eddie.surf/playground) - Test crawls in your browser  
+- **Support**: [eddie.surf/contact](https://eddie.surf/contact) - Get help from the team
+- **Issues**: [GitHub Issues](https://github.com/surescaleai/n8n-nodes-eddie-surf/issues) - Report bugs or request features
 
 ## License
 
 MIT - see [LICENSE.md](LICENSE.md) for details.
 
-## Contributing
+---
 
-Contributions welcome! Please read our contributing guidelines and submit pull requests.
+Ready to surf the web for data? Install the node and start building smarter workflows with reliable web extraction. 🏄‍♂️
