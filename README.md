@@ -93,7 +93,7 @@ All operations support the full Eddie.surf API specification:
 
 ## Support
 
-- **Documentation**: [Eddie.surf Docs](https://eddie.surf/docs)
+- **Documentation**: [Eddie.surf Docs](https://docs.eddie.surf)
 - **Issues**: [GitHub Issues](https://github.com/surescaleai/n8n-nodes-eddie-surf/issues)
 - **API Support**: [Eddie.surf Support](https://eddie.surf/support)
 

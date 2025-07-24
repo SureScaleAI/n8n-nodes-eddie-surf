@@ -8,7 +8,7 @@ import {
 export class EddieApi implements ICredentialType {
 	name = 'eddieApi';
 	displayName = 'Eddie Surf API';
-	documentationUrl = 'https://eddie.surf/docs';
+	documentationUrl = 'https://docs.eddie.surf';
 	icon = 'file:eddie.svg' as const;
 
 	properties: INodeProperties[] = [
