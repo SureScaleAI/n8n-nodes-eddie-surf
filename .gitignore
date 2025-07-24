@@ -6,4 +6,9 @@ dist
 npm-debug.log*
 yarn.lock
 .vscode/launch.json
+package-lock.json
+
+# Backup and temporary files
 /backups
+*.disabled
+*.bak
