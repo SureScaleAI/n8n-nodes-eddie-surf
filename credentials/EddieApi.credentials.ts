@@ -9,7 +9,7 @@ export class EddieApi implements ICredentialType {
 	name = 'eddieApi';
 	displayName = 'Eddie Surf API';
 	documentationUrl = 'https://docs.eddie.surf';
-	icon = 'file:eddie.svg' as const;
+	icon = 'file:../nodes/EddieSurf/eddie.svg' as const;
 
 	properties: INodeProperties[] = [
 		{
