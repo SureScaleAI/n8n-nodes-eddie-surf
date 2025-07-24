@@ -96,7 +96,6 @@ Perfect for large-scale data extraction that shouldn't block your workflow execu
 | Handle pagination manually | AI automatically follows links |
 | Break on site updates | Adapts to layout changes |
 | Complex proxy management | Built-in IP handling |
-| $1,749/month for ScrapingBee | $0.04-0.06 per page |
 
 ## Resources
 
