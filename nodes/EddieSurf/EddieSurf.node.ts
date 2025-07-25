@@ -133,6 +133,37 @@ export class EddieSurf implements INodeType {
         },
         options: [
           {
+            displayName: 'Callback Mode',
+            name: 'callbackMode',
+            type: 'options',
+            options: [
+              {
+                name: 'Once',
+                value: 'once',
+              },
+              {
+                name: 'Multi',
+                value: 'multi',
+              },
+            ],
+            default: 'once',
+            description: 'Callback mode for notifications',
+          },
+          {
+            displayName: 'Callback URL',
+            name: 'callbackUrl',
+            type: 'string',
+            default: '',
+            description: 'Optional webhook URL for job completion notifications',
+          },
+          {
+            displayName: 'Include Technical Data',
+            name: 'includeTechnical',
+            type: 'boolean',
+            default: false,
+            description: 'Whether to include technical data collection (costs 1 additional credit per page)',
+          },
+          {
             displayName: 'Max Depth',
             name: 'maxDepth',
             type: 'number',
@@ -159,16 +190,19 @@ export class EddieSurf implements INodeType {
             description: 'Maximum number of search results to return (1-5000)',
           },
           {
-            displayName: 'Website Only',
-            name: 'websiteOnly',
+            displayName: 'Mock Mode',
+            name: 'mock',
             type: 'boolean',
             default: false,
-            displayOptions: {
-              show: {
-                '/operation': ['smartSearch'],
-              },
-            },
-            description: 'Whether to search only within the specified websites',
+            description: 'Whether to enable test mode without using credits',
+          },
+          {
+            displayName: 'Rules',
+            name: 'rules',
+            type: 'string',
+            default: '',
+            placeholder: 'Extract pricing, Extract contact info',
+            description: 'Comma-separated list of custom processing instructions',
           },
           {
             displayName: 'Skip Duplicate Domains',
@@ -190,50 +224,16 @@ export class EddieSurf implements INodeType {
             description: 'Timeout per page in seconds (1-180)',
           },
           {
-            displayName: 'Callback URL',
-            name: 'callbackUrl',
-            type: 'string',
-            default: '',
-            description: 'Optional webhook URL for job completion notifications',
-          },
-          {
-            displayName: 'Callback Mode',
-            name: 'callbackMode',
-            type: 'options',
-            options: [
-              {
-                name: 'Once',
-                value: 'once',
-              },
-              {
-                name: 'Multi',
-                value: 'multi',
-              },
-            ],
-            default: 'once',
-            description: 'Callback mode for notifications',
-          },
-          {
-            displayName: 'Rules',
-            name: 'rules',
-            type: 'string',
-            default: '',
-            placeholder: 'Extract pricing, Extract contact info',
-            description: 'Comma-separated list of custom processing instructions',
-          },
-          {
-            displayName: 'Include Technical Data',
-            name: 'includeTechnical',
+            displayName: 'Website Only',
+            name: 'websiteOnly',
             type: 'boolean',
             default: false,
-            description: 'Whether to include technical data collection (costs 1 additional credit per page)',
-          },
-          {
-            displayName: 'Mock Mode',
-            name: 'mock',
-            type: 'boolean',
-            default: false,
-            description: 'Whether to enable test mode without using credits',
+            displayOptions: {
+              show: {
+                '/operation': ['smartSearch'],
+              },
+            },
+            description: 'Whether to search only within the specified websites',
           },
         ],
       },
