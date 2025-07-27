@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-eddie-surf",
-  "version": "0.1.0",
+  "name": "@nickwatson/n8n-nodes-eddie-surf",
+  "version": "0.1.2",
   "description": "n8n community nodes for Eddie Surf web crawling and search",
   "keywords": [
     "n8n-community-node-package",
